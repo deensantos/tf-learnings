@@ -14,7 +14,7 @@ variable "ec2_tags" {
 }
 
 variable "instance_type" {
-  default = "t2.large"
+  #default = "t2.large"
 }
 
 variable "ami" {

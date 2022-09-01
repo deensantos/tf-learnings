@@ -23,3 +23,8 @@ user_data = templatefile(var.user_data, { "name" = "test"})
 tags = merge({Name = var.name},var.ec2_tags)
 
 }
+
+output "instance_id" {
+  description = "ID of instance"
+  value       = aws_instance.instance.id
+}
