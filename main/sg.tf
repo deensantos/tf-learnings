@@ -26,6 +26,25 @@ resource "aws_security_group" "tf_learning_sg" {
 #     protocol         = "tcp"
 #     cidr_blocks      = ["0.0.0.0/0"]
 #   }
+
+  ingress {
+    description      = "SSH"
+    from_port        = 23
+    to_port          = 23
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    description      = "HTTP"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+
+
 }
 
 output "aws_security_id" {
